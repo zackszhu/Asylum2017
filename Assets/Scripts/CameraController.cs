@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour {
 
-    private static CameraController Instance;
+    public static CameraController Instance { get; private set; }
 
+    public bool FollowEnabled { get; private set; }
     [SerializeField] float DirectionBias = 3f;
     [SerializeField] float SpeedCoef = 4f;
     private Vector3 PlayerRelCenterPos;
@@ -21,7 +22,16 @@ public class CameraController : MonoBehaviour {
     void Start () {
         player = PlayerController.Instance;
         PlayerRelCenterPos = transform.position - player.transform.position;
+
+        FollowEnabled = true;
 	}
+
+    public void SetFollowEnabled(bool enabled) {
+        if (enabled != FollowEnabled) {
+            FollowEnabled = enabled;
+            // possible other stuff
+        }
+    }
 
     private void MoveToUpdate (Vector3 pos) {
         Vector3 rel = pos - transform.position;
@@ -42,6 +52,8 @@ public class CameraController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        FollowUpdate();
+        if (FollowEnabled) {
+            FollowUpdate();
+        }
 	}
 }

@@ -5,11 +5,12 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     public static PlayerController Instance { get; private set; }
-
+    
     public float MoveSpeed = 2.5f;
+    public bool MoveEnbled { get; private set; }
     public bool FaceForward { get; private set; }
     public bool IsMoving { get; private set; }
-
+    
     private CharacterController controller;
 
     private void Awake () {
@@ -24,9 +25,17 @@ public class PlayerController : MonoBehaviour {
 
         IsMoving = false;
         FaceForward = true;
+        MoveEnbled = true;
     }
 
-    private void InputUpdate () { // TEST
+    public void SetMoveEnabled(bool enabled) {
+        if (enabled != MoveEnbled) {
+            MoveEnbled = enabled;
+            // possible other stuff
+        }
+    }
+
+    private void InputUpdate () { 
         float movement = Input.GetAxis("Horizontal");
         controller.SimpleMove(new Vector3(MoveSpeed * movement, 0f, 0f));
 
@@ -44,6 +53,8 @@ public class PlayerController : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        InputUpdate();
+        if (MoveEnbled) {
+            InputUpdate();
+        }
     }
 }

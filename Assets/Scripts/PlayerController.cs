@@ -9,8 +9,11 @@ public class PlayerController : MonoBehaviour {
     public float MoveSpeed = 2.5f;
     public bool MoveEnbled { get; private set; }
     public bool FaceForward { get; private set; }
+    private bool prevForward;
     public bool IsMoving { get; private set; }
-    
+
+    private Quaternion backwardQuaternion;
+
     private CharacterController controller;
 
     private void Awake () {
@@ -26,6 +29,7 @@ public class PlayerController : MonoBehaviour {
         IsMoving = false;
         FaceForward = true;
         MoveEnbled = true;
+        backwardQuaternion = Quaternion.Euler(new Vector3(0, 180, 0));
     }
 
     public void SetMoveEnabled(bool enabled) {
@@ -44,9 +48,15 @@ public class PlayerController : MonoBehaviour {
         } else {
             IsMoving = true;
             if (movement > 0f) {
-                FaceForward = true;
+                if (!prevForward) {
+                    FaceForward = true;
+                    transform.rotation = Quaternion.identity;
+                }
             } else {
-                FaceForward = false;
+                if (prevForward) {
+                    FaceForward = false;
+                    transform.rotation = backwardQuaternion;
+                }
             }
         }
     }
@@ -56,5 +66,8 @@ public class PlayerController : MonoBehaviour {
         if (MoveEnbled) {
             InputUpdate();
         }
+    }
+    private void LateUpdate() {
+        prevForward = FaceForward;
     }
 }

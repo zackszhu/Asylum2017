@@ -6,11 +6,12 @@ public class PlayerController : MonoBehaviour {
 
     public static PlayerController Instance { get; private set; }
     
-    public float MoveSpeed = 2.5f;
+    public float MoveSpeed = 2f;
     public bool MoveEnbled { get; private set; }
     public bool FaceForward { get; private set; }
     private bool prevForward;
     public bool IsMoving { get; private set; }
+    public bool IsHiding { get; private set; }
 
     private Quaternion backwardQuaternion;
 
@@ -30,6 +31,18 @@ public class PlayerController : MonoBehaviour {
         FaceForward = true;
         MoveEnbled = true;
         backwardQuaternion = Quaternion.Euler(new Vector3(0, 180, 0));
+    }
+
+    public void Hide () {
+        IsHiding = true;
+        SetMoveEnabled(false);
+        // TODO animation
+    }
+
+    public void Appear () {
+        IsHiding = false;
+        SetMoveEnabled(true);
+        // TODO animation
     }
 
     public void SetMoveEnabled(bool enabled) {

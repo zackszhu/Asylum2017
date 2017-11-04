@@ -1,0 +1,334 @@
+fileFormatVersion: 2
+guid: 4796b124fb62e324298b449b2361479b
+timeCreated: 1509759240
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Curtain_Rod1
+    100002: Curtain_Rod2
+    100004: door
+    100006: entranceFloor
+    100008: livingroomfloor
+    100010: livingroomfloor2
+    100012: livingroomFloor3
+    100014: pCube1
+    100016: pCube11
+    100018: pCube12
+    100020: pCube14
+    100022: pCube15
+    100024: pCube17
+    100026: pCube19
+    100028: pCube20
+    100030: pCube22
+    100032: pCube3
+    100034: pCube4
+    100036: pCube6
+    100038: pCube7
+    100040: pCube9
+    100042: polySurface10
+    100044: polySurface11
+    100046: polySurface12
+    100048: polySurface13
+    100050: polySurface14
+    100052: polySurface15
+    100054: polySurface16
+    100056: polySurface17
+    100058: polySurface2
+    100060: polySurface2 1
+    100062: polySurface3
+    100064: polySurface3 1
+    100066: polySurface4
+    100068: polySurface4 1
+    100070: polySurface5
+    100072: polySurface5 1
+    100074: polySurface6
+    100076: polySurface6 1
+    100078: polySurface7
+    100080: polySurface7 1
+    100082: polySurface8
+    100084: polySurface8 1
+    100086: polySurface9
+    100088: polySurface9 1
+    100090: pPlane1
+    100092: pPlane1 1
+    100094: //RootNode
+    100096: Window
+    100098: Window 1
+    100100: Window2
+    400000: Curtain_Rod1
+    400002: Curtain_Rod2
+    400004: door
+    400006: entranceFloor
+    400008: livingroomfloor
+    400010: livingroomfloor2
+    400012: livingroomFloor3
+    400014: pCube1
+    400016: pCube11
+    400018: pCube12
+    400020: pCube14
+    400022: pCube15
+    400024: pCube17
+    400026: pCube19
+    400028: pCube20
+    400030: pCube22
+    400032: pCube3
+    400034: pCube4
+    400036: pCube6
+    400038: pCube7
+    400040: pCube9
+    400042: polySurface10
+    400044: polySurface11
+    400046: polySurface12
+    400048: polySurface13
+    400050: polySurface14
+    400052: polySurface15
+    400054: polySurface16
+    400056: polySurface17
+    400058: polySurface2
+    400060: polySurface2 1
+    400062: polySurface3
+    400064: polySurface3 1
+    400066: polySurface4
+    400068: polySurface4 1
+    400070: polySurface5
+    400072: polySurface5 1
+    400074: polySurface6
+    400076: polySurface6 1
+    400078: polySurface7
+    400080: polySurface7 1
+    400082: polySurface8
+    400084: polySurface8 1
+    400086: polySurface9
+    400088: polySurface9 1
+    400090: pPlane1
+    400092: pPlane1 1
+    400094: //RootNode
+    400096: Window
+    400098: Window 1
+    400100: Window2
+    2300000: Curtain_Rod1
+    2300002: Curtain_Rod2
+    2300004: door
+    2300006: entranceFloor
+    2300008: livingroomfloor
+    2300010: livingroomfloor2
+    2300012: livingroomFloor3
+    2300014: pCube1
+    2300016: pCube11
+    2300018: pCube12
+    2300020: pCube14
+    2300022: pCube15
+    2300024: pCube17
+    2300026: pCube19
+    2300028: pCube20
+    2300030: pCube22
+    2300032: pCube3
+    2300034: pCube4
+    2300036: pCube6
+    2300038: pCube7
+    2300040: pCube9
+    2300042: polySurface10
+    2300044: polySurface11
+    2300046: polySurface12
+    2300048: polySurface13
+    2300050: polySurface14
+    2300052: polySurface15
+    2300054: polySurface16
+    2300056: polySurface17
+    2300058: polySurface2
+    2300060: polySurface2 1
+    2300062: polySurface3
+    2300064: polySurface3 1
+    2300066: polySurface4
+    2300068: polySurface4 1
+    2300070: polySurface5
+    2300072: polySurface5 1
+    2300074: polySurface6
+    2300076: polySurface6 1
+    2300078: polySurface7
+    2300080: polySurface7 1
+    2300082: polySurface8
+    2300084: polySurface8 1
+    2300086: polySurface9
+    2300088: polySurface9 1
+    2300090: pPlane1
+    2300092: pPlane1 1
+    2300094: Window
+    2300096: Window 1
+    2300098: Window2
+    3300000: Curtain_Rod1
+    3300002: Curtain_Rod2
+    3300004: door
+    3300006: entranceFloor
+    3300008: livingroomfloor
+    3300010: livingroomfloor2
+    3300012: livingroomFloor3
+    3300014: pCube1
+    3300016: pCube11
+    3300018: pCube12
+    3300020: pCube14
+    3300022: pCube15
+    3300024: pCube17
+    3300026: pCube19
+    3300028: pCube20
+    3300030: pCube22
+    3300032: pCube3
+    3300034: pCube4
+    3300036: pCube6
+    3300038: pCube7
+    3300040: pCube9
+    3300042: polySurface10
+    3300044: polySurface11
+    3300046: polySurface12
+    3300048: polySurface13
+    3300050: polySurface14
+    3300052: polySurface15
+    3300054: polySurface16
+    3300056: polySurface17
+    3300058: polySurface2
+    3300060: polySurface2 1
+    3300062: polySurface3
+    3300064: polySurface3 1
+    3300066: polySurface4
+    3300068: polySurface4 1
+    3300070: polySurface5
+    3300072: polySurface5 1
+    3300074: polySurface6
+    3300076: polySurface6 1
+    3300078: polySurface7
+    3300080: polySurface7 1
+    3300082: polySurface8
+    3300084: polySurface8 1
+    3300086: polySurface9
+    3300088: polySurface9 1
+    3300090: pPlane1
+    3300092: pPlane1 1
+    3300094: Window
+    3300096: Window 1
+    3300098: Window2
+    4300000: pCube1
+    4300002: livingroomFloor3
+    4300004: pCube12
+    4300006: pCube3
+    4300008: pCube15
+    4300010: pCube4
+    4300012: pCube6
+    4300014: pCube7
+    4300016: pCube9
+    4300018: door
+    4300020: entranceFloor
+    4300022: pCube11
+    4300024: pCube22
+    4300026: livingroomfloor
+    4300028: pCube17
+    4300030: pCube14
+    4300032: livingroomfloor2
+    4300034: pCube19
+    4300036: pCube20
+    4300038: Curtain_Rod1
+    4300040: Window
+    4300042: polySurface2
+    4300044: polySurface3
+    4300046: polySurface4
+    4300048: polySurface9
+    4300050: polySurface5
+    4300052: polySurface6
+    4300054: polySurface8
+    4300056: polySurface7
+    4300058: pPlane1
+    4300060: Curtain_Rod2
+    4300062: Window
+    4300064: polySurface2
+    4300066: polySurface3
+    4300068: polySurface4
+    4300070: polySurface9
+    4300072: polySurface5
+    4300074: polySurface6
+    4300076: polySurface8
+    4300078: polySurface7
+    4300080: pPlane1
+    4300082: Window2
+    4300084: polySurface10
+    4300086: polySurface11
+    4300088: polySurface12
+    4300090: polySurface13
+    4300092: polySurface14
+    4300094: polySurface15
+    4300096: polySurface16
+    4300098: polySurface17
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

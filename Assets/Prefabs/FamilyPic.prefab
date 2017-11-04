@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4090355248359546}
   - component: {fileID: 33459595102296512}
   - component: {fileID: 23724461731526196}
-  - component: {fileID: 95639905098896028}
   - component: {fileID: 114029400632351964}
   m_Layer: 0
   m_Name: FamilyPic
@@ -55,7 +54,7 @@ Transform:
   m_GameObject: {fileID: 1281422186256278}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -5.67, y: 2.61, z: 4.19}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4438497262021704}
   m_Father: {fileID: 0}
@@ -152,23 +151,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1468374007994510}
   m_Mesh: {fileID: 4300002, guid: c1d75e21d69294f4181cb53f380671c5, type: 3}
---- !u!95 &95639905098896028
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1281422186256278}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: c1d75e21d69294f4181cb53f380671c5, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114029400632351964
 MonoBehaviour:
   m_ObjectHideFlags: 1

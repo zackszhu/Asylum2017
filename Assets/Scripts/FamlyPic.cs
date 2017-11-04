@@ -8,13 +8,22 @@ public class FamlyPic : MonoBehaviour {
     [SerializeField] Material HorrorMat;
 
     [SerializeField] Renderer PicRenderer;
+    
+    public IEnumerator FlashHorrorCoroutine () {
+        ShowHorror(true);
+        yield return new WaitForSeconds(0.1f);
+        ShowHorror(false);
+        yield return new WaitForSeconds(0.1f);
+        ShowHorror(true);
+        yield return new WaitForSeconds(0.1f);
+        ShowHorror(false);
+        yield return new WaitForSeconds(0.1f);
+        ShowHorror(true);
+        yield return new WaitForSeconds(0.2f);
+        ShowHorror(false);
+    }
 
-    // Use this for initialization
-    void Start () {
-		
-	}
-
-    private void ShowHorror(bool show) {
+    public void ShowHorror(bool show) {
         if (show) {
             PicRenderer.material = HorrorMat;
         } else {
@@ -24,8 +33,9 @@ public class FamlyPic : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        // TEST
 		if (Input.GetKeyDown(KeyCode.H)) {
-            ShowHorror(true);
+            StartCoroutine(FlashHorrorCoroutine());
         }
 	}
 }

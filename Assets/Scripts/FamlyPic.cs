@@ -1,8 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FamlyPic : MonoBehaviour {
+public class FamlyPic : InteractiveTrigger {
+
+    
 
     [SerializeField] Material NormalMat;
     [SerializeField] Material HorrorMat;
@@ -30,12 +33,21 @@ public class FamlyPic : MonoBehaviour {
             PicRenderer.material = NormalMat;
         }
     }
-	
-	// Update is called once per frame
-	void Update () {
-        // TEST
-		if (Input.GetKeyDown(KeyCode.H)) {
-            StartCoroutine(FlashHorrorCoroutine());
-        }
+
+    protected override void InteractionDown () {
+        
+    }
+
+    protected override void PlayerTriggerEnter () {
+        
+    }
+
+    protected override void PlayerTriggerExit () {
+        StartCoroutine(FlashHorrorCoroutine());
+    }
+
+    // Update is called once per frame
+    void Update () {
+        
 	}
 }

@@ -14,3 +14,6 @@ creaks: https://freesound.org/people/RAGE91/sounds/270859/
 	https://freesound.org/people/RAGE91/sounds/270862/
 	https://freesound.org/people/RAGE91/sounds/270861/
 white-noise: https://freesound.org/people/jhepkema/sounds/149445/
+outdoor-rian-ambient: https://freesound.org/people/tnk/sounds/398204/
+thunder: https://freesound.org/people/InspectorJ/sounds/360328/
+indoor-rain-ambient: https://freesound.org/people/macdaddyno1/sounds/396483/

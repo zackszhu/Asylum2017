@@ -18,9 +18,16 @@ public class CameraController : MonoBehaviour {
         else Debug.LogWarning("Multiple CameraController detected");
     }
 
+    public void ResetCamera() {
+        transform.position = new Vector3(player.transform.position.x, transform.position.y, transform.position.z);
+        PlayerRelCenterPos = transform.position - player.transform.position;
+    }
+
     // Use this for initialization
-    void Start () {
+    IEnumerator Start () {
         player = PlayerController.Instance;
+        yield return null;
+        transform.position = new Vector3(player.transform.position.x, transform.position.y, transform.position.z);
         PlayerRelCenterPos = transform.position - player.transform.position;
 
         FollowEnabled = true;

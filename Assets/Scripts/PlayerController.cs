@@ -7,11 +7,15 @@ public class PlayerController : MonoBehaviour {
     public static PlayerController Instance { get; private set; }
     
     public float MoveSpeed = 2f;
+    public float RunSpeed = 3f;
+    public float WalkSpeed = 2f;
     public bool MoveEnbled { get; private set; }
     public bool FaceForward { get; private set; }
     private bool prevForward;
     public bool IsMoving { get; private set; }
     public bool IsHiding { get; private set; }
+
+    public bool IsRunning;
 
     private Quaternion backwardQuaternion;
 
@@ -74,6 +78,16 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    public void Frightened() {
+        IsRunning = true;
+        MoveSpeed = RunSpeed;
+    }
+
+    public void Calm() {
+        IsRunning = false;
+        MoveSpeed = WalkSpeed;
+    }
+
     // Update is called once per frame
     void Update () {
         if (MoveEnbled) {
@@ -82,5 +96,41 @@ public class PlayerController : MonoBehaviour {
     }
     private void LateUpdate() {
         prevForward = FaceForward;
+    }
+
+    public IEnumerator GoInto() {
+        MoveEnbled = false;
+        IsMoving = true;
+        transform.forward = Vector3.left;
+        while (transform.position.z < 3f) {
+            controller.SimpleMove(new Vector3(0f, 0f, MoveSpeed));
+            yield return null;
+        }
+        IsMoving = false;
+        IsHiding = true;
+    }
+
+    public void GoAndDisappear() {
+        foreach (var render in GetComponentsInChildren<Renderer>()) {
+            render.enabled = false;
+        }
+    }
+
+    public IEnumerator GoOut() {
+        MoveEnbled = false;
+        IsMoving = true;
+        foreach (var render in GetComponentsInChildren<Renderer>()) {
+            render.enabled = true;
+        }
+        transform.forward = Vector3.right;
+        IsHiding = false;
+        while (transform.position.z > -1) {
+            controller.SimpleMove(new Vector3(0f, 0f, -MoveSpeed));
+            yield return null;
+        }
+        transform.position = new Vector3(transform.position.x, transform.position.y, -1);
+        transform.forward = Vector3.forward;
+        MoveEnbled = true;
+        IsMoving = false;
     }
 }

@@ -1,0 +1,19 @@
+Sounds: 
+door-open-close: https://freesound.org/people/amholma/sounds/344360/
+house-ambient: https://freesound.org/people/klankbeeld/sounds/272459/
+ghost-laugh-far: https://freesound.org/people/Vosvoy/sounds/149999/
+fireplace: https://freesound.org/people/inchadney/sounds/58833/
+wood-doll-move: https://freesound.org/people/idabrandao/sounds/382987/
+outdoor-night-ambient: https://freesound.org/people/TaXMaNFoReVeR/sounds/325426/
+door-open-crack: https://freesound.org/people/gabisaraceni/sounds/96964/
+switch: https://freesound.org/people/VKProduktion/sounds/217499/
+grass-footstep: https://freesound.org/people/mikaelfernstrom/sounds/68686/
+creaks: https://freesound.org/people/RAGE91/sounds/270859/
+	https://freesound.org/people/RAGE91/sounds/270858/
+	https://freesound.org/people/RAGE91/sounds/270863/
+	https://freesound.org/people/RAGE91/sounds/270862/
+	https://freesound.org/people/RAGE91/sounds/270861/
+white-noise: https://freesound.org/people/jhepkema/sounds/149445/
+outdoor-rian-ambient: https://freesound.org/people/tnk/sounds/398204/
+thunder: https://freesound.org/people/InspectorJ/sounds/360328/
+indoor-rain-ambient: https://freesound.org/people/macdaddyno1/sounds/396483/

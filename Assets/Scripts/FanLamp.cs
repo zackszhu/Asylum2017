@@ -15,6 +15,7 @@ public class FanLamp : InteractiveTrigger {
     [SerializeField] GameObject LampLight;
     [SerializeField] Material LampNormalMat;
     [SerializeField] Material LampLightMat;
+    [SerializeField] AudioSource SwitchSound;
 
     // Use this for initialization
     void Start () {
@@ -50,7 +51,8 @@ public class FanLamp : InteractiveTrigger {
     
     protected override void InteractionDown () {
         if (LightEnabled)
-            SwitchLightOn();
+            SwitchSound.Play();
+            Invoke("SwitchLightOn", 0.4f);
     }
 
     protected override void PlayerTriggerEnter () {

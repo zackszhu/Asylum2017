@@ -12,6 +12,7 @@ public class TV : InteractiveTrigger {
     [SerializeField] Renderer TVRenderer;
     [SerializeField] Material NoiseMat;
     [SerializeField] Material BlackMat;
+    [SerializeField] AudioSource NoiseAudio;
 
     // Use this for initialization
     void Start () {
@@ -23,10 +24,12 @@ public class TV : InteractiveTrigger {
             //TVPlayer.Play();
             TVRenderer.material = NoiseMat;
             TVLight.SetActive(true);
+            NoiseAudio.Play();
         } else {
             //TVPlayer.Stop();
             TVRenderer.material = BlackMat;
             TVLight.SetActive(false);
+            NoiseAudio.Stop();
         }
     }
     

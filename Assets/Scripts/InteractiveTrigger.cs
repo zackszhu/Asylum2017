@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class InteractiveTrigger : MonoBehaviour {
-
+    [SerializeField]
     protected bool TriggerEnabled = true;
     protected bool InteractiveEnabled = true;
 

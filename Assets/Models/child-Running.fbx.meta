@@ -1,0 +1,204 @@
+fileFormatVersion: 2
+guid: 394f0b001d702a3469b3ee61bedc73be
+timeCreated: 1509921707
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: arm_L
+    100002: arm_R
+    100004: //RootNode
+    100006: foot_L
+    100008: foot_R
+    100010: hand_L
+    100012: hand_R
+    100014: head
+    100016: hip
+    100018: joint11
+    100020: joint111
+    100022: joint12
+    100024: joint121
+    100026: joint13
+    100028: joint131
+    100030: joint14
+    100032: joint141
+    100034: joint15
+    100036: joint151
+    100038: joint16
+    100040: joint161
+    100042: joint17
+    100044: joint171
+    100046: joint2
+    100048: joint21
+    100050: joint211
+    100052: joint22
+    100054: joint221
+    100056: joint3
+    100058: joint4
+    100060: joint7
+    100062: leg_L
+    100064: leg_R
+    100066: lowerArm_L
+    100068: lowerArm_R
+    100070: lowerLeg_L
+    100072: lowerLeg_R
+    100074: neck
+    100076: pCube11
+    100078: pCube4
+    100080: pCube9
+    100082: pSphere1
+    400000: arm_L
+    400002: arm_R
+    400004: //RootNode
+    400006: foot_L
+    400008: foot_R
+    400010: hand_L
+    400012: hand_R
+    400014: head
+    400016: hip
+    400018: joint11
+    400020: joint111
+    400022: joint12
+    400024: joint121
+    400026: joint13
+    400028: joint131
+    400030: joint14
+    400032: joint141
+    400034: joint15
+    400036: joint151
+    400038: joint16
+    400040: joint161
+    400042: joint17
+    400044: joint171
+    400046: joint2
+    400048: joint21
+    400050: joint211
+    400052: joint22
+    400054: joint221
+    400056: joint3
+    400058: joint4
+    400060: joint7
+    400062: leg_L
+    400064: leg_R
+    400066: lowerArm_L
+    400068: lowerArm_R
+    400070: lowerLeg_L
+    400072: lowerLeg_R
+    400074: neck
+    400076: pCube11
+    400078: pCube4
+    400080: pCube9
+    400082: pSphere1
+    4300000: pCube11
+    4300002: pCube4
+    4300004: pSphere1
+    4300006: pCube9
+    7400000: mixamo.com
+    9500000: //RootNode
+    13700000: pCube11
+    13700002: pCube4
+    13700004: pCube9
+    13700006: pSphere1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: mixamo.com
+      takeName: mixamo.com
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

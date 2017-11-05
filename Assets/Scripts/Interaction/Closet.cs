@@ -1,0 +1,35 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Closet : InteractiveTrigger {
+    protected override void InteractionDown() {
+        InteractiveEnabled = false;
+        StartCoroutine(DownCO());
+    }
+
+    private IEnumerator DownCO() {
+        yield return StartCoroutine(PlayerController.Instance.GoInto());
+        GetComponent<Animator>().SetTrigger("Open");
+        Invoke("Disappear", 0.3f);
+        yield return StartCoroutine(GoOut());
+    }
+
+    private void Disappear() {
+        PlayerController.Instance.GoAndDisappear();
+    }
+
+    private IEnumerator GoOut() {
+        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+        GetComponent<Animator>().SetTrigger("Open");
+        yield return StartCoroutine(PlayerController.Instance.GoOut());
+        PlayerController.Instance.Calm();
+        InteractiveEnabled = true;
+    }
+
+    protected override void PlayerTriggerEnter() {
+    }
+
+    protected override void PlayerTriggerExit() {
+    }
+}

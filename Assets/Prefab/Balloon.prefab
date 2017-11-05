@@ -108,8 +108,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4408202373910484}
-  - component: {fileID: 114471764088163912}
-  - component: {fileID: 65994040041128728}
   m_Layer: 0
   m_Name: Balloon
   m_TagString: Untagged
@@ -150,7 +148,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1736844675509410}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.75, y: 5, z: -1}
+  m_LocalPosition: {x: 20, y: 5, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4806465434814642}
@@ -165,8 +163,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1678164523042384}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -6, z: 0}
-  m_LocalScale: {x: 60, y: 60, z: 60}
+  m_LocalPosition: {x: 0, y: -5, z: 0}
+  m_LocalScale: {x: 30, y: 30, z: 30}
   m_Children:
   - {fileID: 4226313156748808}
   - {fileID: 4477366135589306}
@@ -194,7 +192,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1314052751510704}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 20, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4408202373910484}
@@ -317,8 +315,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.15, y: 0.1, z: 0.1}
-  m_Center: {x: -0.075, y: 0.06, z: 0}
+  m_Size: {x: 0.2, y: 0.1, z: 0.1}
+  m_Center: {x: -0.1, y: 0.06, z: 0}
 --- !u!65 &65867125564469064
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -331,18 +329,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0.4, y: 0, z: 0}
---- !u!65 &65994040041128728
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1736844675509410}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 8, y: 4, z: 2}
-  m_Center: {x: -4, y: -2, z: 0}
 --- !u!114 &114114417121530018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -355,32 +341,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballPosition: {fileID: 4226313156748808}
-  targetX: 35
+  targetX: 27
   floatForce: 1
   fleeForce: 1
   chaseForce: 1
   chaseMaxSpeed: 3
   chaseTarget: {fileID: 0}
   chaseTargetOffset: {x: 0, y: 2, z: 0}
---- !u!114 &114471764088163912
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1736844675509410}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3e72e1c51d349a40ad84a6a06f2dea0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ballPosition: {fileID: 0}
-  targetX: 35
-  floatForce: 1
-  fleeForce: 1
-  chaseForce: 1
-  chaseMaxSpeed: 3
-  chaseTarget: {fileID: 0}
-  chaseTargetOffset: {x: 0, y: 0, z: 0}
 --- !u!135 &135817767691385482
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -434,8 +401,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0, y: -0.043920822, z: -0.00010113977}
-    m_Extent: {x: 0.00016600292, y: 0.041964304, z: 0.00012699566}
+    m_Center: {x: 0, y: -0.043920826, z: -0.00010114163}
+    m_Extent: {x: 0.00016600292, y: 0.041964304, z: 0.00012699763}
   m_DirtyAABB: 0
 --- !u!137 &137961270058485558
 SkinnedMeshRenderer:

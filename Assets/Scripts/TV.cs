@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Video;
+using UnityEngine.Events;
 
 public class TV : InteractiveTrigger {
 
@@ -14,9 +14,12 @@ public class TV : InteractiveTrigger {
     [SerializeField] Material BlackMat;
     [SerializeField] AudioSource NoiseAudio;
 
+    [SerializeField] bool startState;
+    [SerializeField] bool enterState;
+
     // Use this for initialization
     void Start () {
-        TurnOnTV(false);
+        TurnOnTV(startState);
 	}
 
     public void TurnOnTV (bool on) {
@@ -38,11 +41,11 @@ public class TV : InteractiveTrigger {
     }
 
     protected override void PlayerTriggerEnter () {
-        TurnOnTV(true);
+        TurnOnTV(enterState);
     }
 
     protected override void PlayerTriggerExit () {
-        TurnOnTV(false);
+        //TurnOnTV(false);
     }
 
     // Update is called once per frame

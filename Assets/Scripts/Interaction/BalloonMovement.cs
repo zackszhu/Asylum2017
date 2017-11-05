@@ -13,7 +13,9 @@ public class BalloonMovement : MonoBehaviour {
     [SerializeField] private Transform chaseTarget;
     [SerializeField] private Vector3 chaseTargetOffset;
 
-    private int step = 0; // 0 for flee, 1 for chase
+    private Coroutine currCO;
+
+    public int step = 0; // 0 for flee, 2 for chase
 
     private void Start() {
         balloonRigidbody = GetComponent<Rigidbody>();
@@ -27,13 +29,17 @@ public class BalloonMovement : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Player")) {
+            if (step == -1) {
+                if (currCO != null)
+                    StopCoroutine(currCO);
+            }
             if (step == 0) {
                 step = 1;
-                StartCoroutine(FleeCO());
+                currCO = StartCoroutine(FleeCO());
             }
             if (step == 2) {
                 step = 3;
-                StartCoroutine(ChaseCO());
+                currCO = StartCoroutine(ChaseCO());
             }
         }
     }
@@ -47,12 +53,16 @@ public class BalloonMovement : MonoBehaviour {
     }
 
     private IEnumerator ChaseCO() {
-        while (true) { // need variable
+        PlayerController.Instance.Frightened();
+        while (!PlayerController.Instance.IsHiding) { // need variable
             balloonRigidbody.AddForce((chaseTarget.position + chaseTargetOffset - ballPosition.position) * chaseForce);
             balloonRigidbody.velocity = Mathf.Clamp(balloonRigidbody.velocity.magnitude, 0, chaseMaxSpeed) * balloonRigidbody.velocity.normalized;
+            if ((chaseTarget.position + chaseTargetOffset - ballPosition.position).magnitude < 0.2f) {
+                GameFlow.Instance.Die();
+            }
             yield return null;
         }
-        step++;
+        step = -1;
     }
 
 }

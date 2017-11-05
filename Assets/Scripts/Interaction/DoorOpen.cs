@@ -6,6 +6,10 @@ using UnityEngine;
 public class DoorOpen : MonoBehaviour {
     [SerializeField]
     private Animator doorAnimator;
+    [SerializeField]
+    private bool lockAfterOpen;
+
+    private bool canOpen = true;
 
     private string[] triggers = { "LeftOpen", "RightOpen" };
 
@@ -13,11 +17,17 @@ public class DoorOpen : MonoBehaviour {
         doorAnimator.ResetTrigger("Close");
         if (other.CompareTag("Player")) {
             int index = Convert.ToInt32(other.transform.position.x > transform.position.x);
+            if (index == 1 && !canOpen) return;
             doorAnimator.SetTrigger(triggers[index]);
         }
     }
 
     private void OnTriggerExit(Collider other) {
-        doorAnimator.SetTrigger("Close");
+        if (other.CompareTag("Player")) {
+            doorAnimator.SetTrigger("Close");
+            if (lockAfterOpen) {
+                canOpen = false;
+            }
+        }
     }
 }

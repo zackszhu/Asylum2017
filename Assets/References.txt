@@ -17,3 +17,4 @@ white-noise: https://freesound.org/people/jhepkema/sounds/149445/
 outdoor-rian-ambient: https://freesound.org/people/tnk/sounds/398204/
 thunder: https://freesound.org/people/InspectorJ/sounds/360328/
 indoor-rain-ambient: https://freesound.org/people/macdaddyno1/sounds/396483/
+big-crash: https://freesound.org/people/PatrickLieberkind/sounds/243613/

@@ -22,8 +22,8 @@ public class FamlyPic : InteractiveTrigger {
         ShowHorror(false);
         yield return new WaitForSeconds(0.1f);
         ShowHorror(true);
-        yield return new WaitForSeconds(0.2f);
-        ShowHorror(false);
+        //yield return new WaitForSeconds(0.2f);
+        //ShowHorror(false);
     }
 
     public void ShowHorror(bool show) {
@@ -44,6 +44,11 @@ public class FamlyPic : InteractiveTrigger {
 
     protected override void PlayerTriggerExit () {
         StartCoroutine(FlashHorrorCoroutine());
+        TriggerEnabled = false;
+    }
+
+    private void Start() {
+        ShowHorror(false);
     }
 
     // Update is called once per frame

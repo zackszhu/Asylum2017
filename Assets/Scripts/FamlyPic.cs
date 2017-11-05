@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class FamlyPic : InteractiveTrigger {
 
-    
+    public bool AllowTriggerHoror;
 
     [SerializeField] Material NormalMat;
     [SerializeField] Material HorrorMat;
@@ -16,14 +16,8 @@ public class FamlyPic : InteractiveTrigger {
         ShowHorror(true);
         yield return new WaitForSeconds(0.1f);
         ShowHorror(false);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.15f);
         ShowHorror(true);
-        yield return new WaitForSeconds(0.1f);
-        ShowHorror(false);
-        yield return new WaitForSeconds(0.1f);
-        ShowHorror(true);
-        yield return new WaitForSeconds(0.2f);
-        ShowHorror(false);
     }
 
     public void ShowHorror(bool show) {
@@ -43,7 +37,10 @@ public class FamlyPic : InteractiveTrigger {
     }
 
     protected override void PlayerTriggerExit () {
-        StartCoroutine(FlashHorrorCoroutine());
+        if (AllowTriggerHoror) {
+            AllowTriggerHoror = false;
+            StartCoroutine(FlashHorrorCoroutine());
+        }
     }
 
     // Update is called once per frame

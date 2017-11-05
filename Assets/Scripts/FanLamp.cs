@@ -50,9 +50,10 @@ public class FanLamp : InteractiveTrigger {
     }
     
     protected override void InteractionDown () {
-        if (LightEnabled)
+        if (LightEnabled) {
             SwitchSound.Play();
             Invoke("SwitchLightOn", 0.4f);
+        }
     }
 
     protected override void PlayerTriggerEnter () {

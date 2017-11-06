@@ -27,9 +27,6 @@ public class GameFlow : MonoBehaviour {
         if (checkpointIndex + 1 < checkpoints.Length && PlayerController.Instance.transform.position.x > checkpoints[checkpointIndex + 1]) {
             checkpointIndex++;
         }
-        if (Input.GetKeyDown(KeyCode.A)) {
-            Die();
-        }
     }
 
     public void Die() {
@@ -37,14 +34,15 @@ public class GameFlow : MonoBehaviour {
         BoySoundController.PlayScream();
         var pos = PlayerController.Instance.transform.position;
         pos.x = checkpoints[checkpointIndex];
+        pos.z = -1;
         if (reloadCO == null) {
+            Fader.Die();
             reloadCO = StartCoroutine(LoadYourAsyncScene(pos));
         }
         isDied = true;
     }
 
     IEnumerator LoadYourAsyncScene(Vector3 pos) {
-        Fader.Die();
         yield return StartCoroutine(Fader.FadeOutCoroutine());
         //Fader.Die();
 

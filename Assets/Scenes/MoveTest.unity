@@ -9021,7 +9021,7 @@ MonoBehaviour:
   chaseTarget: {fileID: 8068086}
   chaseTargetOffset: {x: 0, y: 2, z: 0}
   step: 2
-  chaseDistance: 0.3
+  chaseDistance: 1
 --- !u!65 &217008215
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -81512,7 +81512,7 @@ MonoBehaviour:
   chaseTarget: {fileID: 8068086}
   chaseTargetOffset: {x: 0, y: 2, z: 0}
   step: 2
-  chaseDistance: 0.3
+  chaseDistance: 1
 --- !u!65 &1375258018
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -95356,7 +95356,7 @@ MonoBehaviour:
   chaseTarget: {fileID: 8068086}
   chaseTargetOffset: {x: 0, y: 2, z: 0}
   step: 2
-  chaseDistance: 0.3
+  chaseDistance: 1
 --- !u!65 &1673155308
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -116523,7 +116523,7 @@ MonoBehaviour:
   chaseTarget: {fileID: 8068086}
   chaseTargetOffset: {x: 0, y: 2, z: 0}
   step: 2
-  chaseDistance: 0.3
+  chaseDistance: 1
 --- !u!65 &2086415734
 BoxCollider:
   m_ObjectHideFlags: 0

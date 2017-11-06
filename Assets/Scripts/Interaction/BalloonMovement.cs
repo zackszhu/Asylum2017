@@ -65,6 +65,7 @@ public class BalloonMovement : MonoBehaviour {
             balloonRigidbody.velocity = Mathf.Clamp(balloonRigidbody.velocity.magnitude, 0, chaseMaxSpeed) * balloonRigidbody.velocity.normalized;
             if ((chaseTarget.position + chaseTargetOffset - ballPosition.position).magnitude < chaseDistance) {
                 GameFlow.Instance.Die();
+                StopAllCoroutines();
             }
             yield return null;
         }
@@ -75,6 +76,7 @@ public class BalloonMovement : MonoBehaviour {
             balloonRigidbody.velocity = Mathf.Clamp(balloonRigidbody.velocity.magnitude, 0, chaseMaxSpeed) * balloonRigidbody.velocity.normalized;
             if (!PlayerController.Instance.IsHiding) {
                 GameFlow.Instance.Die();
+                StopAllCoroutines();
             }
             yield return null;
         }

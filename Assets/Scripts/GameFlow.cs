@@ -12,6 +12,7 @@ public class GameFlow : MonoBehaviour {
             //Destroy(gameObject);
         }
         Instance = this;
+        Cursor.lockState = CursorLockMode.Locked;
         DontDestroyOnLoad(gameObject);
     }
 
@@ -24,9 +25,11 @@ public class GameFlow : MonoBehaviour {
     private bool isDied = false;
 
     private IEnumerator Start() {
-        TextController.ShowText(TextController.WhereIsMom);
-        yield return new WaitForSeconds(3f);
-        TextController.HideText();
+        if (Instance.checkpointIndex == 0) {
+            TextController.ShowText(TextController.WhereIsMom);
+            yield return new WaitForSeconds(3f);
+            TextController.HideText();
+        }
     }
 
     private void Update() {

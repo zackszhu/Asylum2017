@@ -7,6 +7,7 @@ public class MenuLight : MonoBehaviour {
     public float LightIntensity;
 
     private void Start() {
+        Cursor.lockState = CursorLockMode.None;
         FlashLight();
     }
 

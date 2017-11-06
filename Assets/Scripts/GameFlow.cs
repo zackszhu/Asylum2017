@@ -35,6 +35,8 @@ public class GameFlow : MonoBehaviour {
     }
 
     IEnumerator LoadYourAsyncScene(Vector3 pos) {
+        yield return StartCoroutine(Fader.FadeOutCoroutine());
+
         // The Application loads the Scene in the background at the same time as the current Scene.
         //This is particularly good for creating loading screens. You could also load the scene by build //number.
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(1, LoadSceneMode.Single);
@@ -44,5 +46,6 @@ public class GameFlow : MonoBehaviour {
             yield return null;
         }
         PlayerController.Instance.transform.position = pos;
+        yield return StartCoroutine(Fader.FadeInCoroutine());
     }
 }

@@ -53,6 +53,9 @@ public class PlayerController : MonoBehaviour {
     public void SetMoveEnabled(bool enabled) {
         if (enabled != MoveEnbled) {
             MoveEnbled = enabled;
+            if (!enabled) {
+                IsMoving = false;
+            }
             // possible other stuff
         }
     }

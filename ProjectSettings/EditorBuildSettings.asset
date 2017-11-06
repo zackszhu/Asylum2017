@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MoveTest.unity
     guid: 5d1d1c8861ca32a40bef9783416e3c83
+  - enabled: 1
+    path: Assets/Scenes/Ending.unity
+    guid: 17d30b5ff59b73542a8b5a0259a73f77

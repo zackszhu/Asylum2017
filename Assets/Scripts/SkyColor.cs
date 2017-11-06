@@ -17,10 +17,29 @@ public class SkyColor : MonoBehaviour {
         if (PlayerController.Instance.transform.position.x > OneMin && PlayerController.Instance.transform.position.x < OneMax
             || PlayerController.Instance.transform.position.x > TwoMin && PlayerController.Instance.transform.position.x < TwoMax
             || PlayerController.Instance.transform.position.x > ThreeMin && PlayerController.Instance.transform.position.x < ThreeMax) {
-            RenderSettings.ambientLight = light;
+            if (RenderSettings.ambientLight != light) {
+                RenderSettings.ambientLight = light;
+                if (GameFlow.Instance.checkpointIndex == 0) {
+                    EnvironmentSoundController.SetAmbientSound(EnvironmentSoundController.Instance.Outdoor_wind);
+                }
+                else {
+                    EnvironmentSoundController.SetAmbientSound(EnvironmentSoundController.Instance.Outdoor_rain);
+                }
+                if (GameFlow.Instance.checkpointIndex == 1) {
+                    Lightening.StartLightening();
+                }
+            }
         }
         else {
-            RenderSettings.ambientLight = dark;
+            if (RenderSettings.ambientLight != dark) {
+                RenderSettings.ambientLight = dark;
+                if (GameFlow.Instance.checkpointIndex == 0) {
+                    EnvironmentSoundController.SetAmbientSound(EnvironmentSoundController.Instance.Indoor_wind);
+                }
+                else {
+                    EnvironmentSoundController.SetAmbientSound(EnvironmentSoundController.Instance.Indoor_rain);
+                }
+            }
         }
     }
 

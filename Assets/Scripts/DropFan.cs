@@ -10,6 +10,7 @@ public class DropFan : InteractiveTrigger {
 
     protected override void PlayerTriggerEnter() {
         rigid.useGravity = true;
+        PlayerController.Instance.Shock();
     }
 
     protected override void PlayerTriggerExit() {

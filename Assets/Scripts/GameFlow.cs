@@ -14,7 +14,7 @@ public class GameFlow : MonoBehaviour {
     [SerializeField]
     private float[] checkpoints;
 
-    private int checkpointIndex;
+    public int checkpointIndex;
     private Coroutine reloadCO;
 
     private void Update() {
@@ -37,7 +37,7 @@ public class GameFlow : MonoBehaviour {
     IEnumerator LoadYourAsyncScene(Vector3 pos) {
         // The Application loads the Scene in the background at the same time as the current Scene.
         //This is particularly good for creating loading screens. You could also load the scene by build //number.
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(0, LoadSceneMode.Single);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(1, LoadSceneMode.Single);
 
         //Wait until the last operation fully loads to return anything
         while (!asyncLoad.isDone) {

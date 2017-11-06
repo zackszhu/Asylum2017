@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour {
         FaceForward = true;
         MoveEnbled = true;
         backwardQuaternion = Quaternion.Euler(new Vector3(0, 180, 0));
+        BoySoundController.PlayBreathNormal();
     }
 
     public void Hide () {
@@ -78,14 +79,21 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    public void Shock() {
+        BoySoundController.PlayShocked();
+    }
+
     public void Frightened() {
         IsRunning = true;
         MoveSpeed = RunSpeed;
+        BoySoundController.PlayShocked();
+        BoySoundController.PlayBreathRun();
     }
 
     public void Calm() {
         IsRunning = false;
         MoveSpeed = WalkSpeed;
+        BoySoundController.PlayBreathNormal();
     }
 
     // Update is called once per frame

@@ -14,7 +14,6 @@ public class DaocaoRenNormal : InteractiveTrigger {
     }
 
     protected override void PlayerTriggerExit() {
-        Debug.Log("Exit");
         if (PlayerController.Instance.transform.position.x >= transform.position.x) {
             PlayerController.Instance.Frightened();
             StartCoroutine(TurnAround());

@@ -21,9 +21,9 @@ public class Closet : InteractiveTrigger {
 
     private IEnumerator GoOut() {
         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+        PlayerController.Instance.Calm();
         GetComponent<Animator>().SetTrigger("Open");
         yield return StartCoroutine(PlayerController.Instance.GoOut());
-        PlayerController.Instance.Calm();
         InteractiveEnabled = true;
     }
 

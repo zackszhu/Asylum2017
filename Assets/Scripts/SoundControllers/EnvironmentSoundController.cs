@@ -11,6 +11,10 @@ public class EnvironmentSoundController : MonoBehaviour {
 
     [SerializeField] AudioSource AmbientSource;
 
+    private void Awake() {
+        Instance = this;
+    }
+
     public static void SetAmbientSound (AudioClip clip) {
         Instance.AmbientSource.clip = clip;
         Instance.AmbientSource.Play();

@@ -11,5 +11,6 @@ public class Portal : MonoBehaviour {
         PlayerController.Instance.transform.position = pos;
         PlayerController.Instance.Calm();
         CameraController.Instance.ResetCamera();
+        BoySoundController.PlayWakeUp();
     }
 }

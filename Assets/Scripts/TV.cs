@@ -41,6 +41,7 @@ public class TV : InteractiveTrigger {
     }
 
     protected override void PlayerTriggerEnter () {
+        PlayerController.Instance.Shock();
         TurnOnTV(enterState);
     }
 

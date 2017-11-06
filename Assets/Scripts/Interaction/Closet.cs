@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Closet : InteractiveTrigger {
+
+    [SerializeField] GameObject UIPress;
+
     protected override void InteractionDown() {
         InteractiveEnabled = false;
         StartCoroutine(DownCO());
@@ -28,8 +31,10 @@ public class Closet : InteractiveTrigger {
     }
 
     protected override void PlayerTriggerEnter() {
+        if (UIPress) UIPress.SetActive(true);
     }
 
     protected override void PlayerTriggerExit() {
+        if (UIPress) UIPress.SetActive(false);
     }
 }

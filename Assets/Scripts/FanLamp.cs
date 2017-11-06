@@ -17,6 +17,8 @@ public class FanLamp : InteractiveTrigger {
     [SerializeField] Material LampLightMat;
     [SerializeField] AudioSource SwitchSound;
 
+    [SerializeField] GameObject UIPress;
+
     // Use this for initialization
     void Start () {
         SetLightOn(false);
@@ -57,11 +59,15 @@ public class FanLamp : InteractiveTrigger {
     }
 
     protected override void PlayerTriggerEnter () {
-        
+        if (LightEnabled) {
+            if (UIPress) UIPress.SetActive(true);
+        }
     }
 
     protected override void PlayerTriggerExit () {
-        
+        if (LightEnabled) {
+            if (UIPress) UIPress.SetActive(false);
+        }
     }
 
     // Update is called once per frame

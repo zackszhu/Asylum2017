@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BalloonMovement : MonoBehaviour {
+    private SphereCollider sCollider;
     private Rigidbody balloonRigidbody;
     [SerializeField] private Transform ballPosition;
     [SerializeField] private float targetX;
@@ -19,6 +20,7 @@ public class BalloonMovement : MonoBehaviour {
 
     private void Start() {
         balloonRigidbody = GetComponent<Rigidbody>();
+        sCollider = GetComponent<SphereCollider>();
     }
 
     private void Update() {
@@ -62,6 +64,17 @@ public class BalloonMovement : MonoBehaviour {
             }
             yield return null;
         }
+        var t = 0f;
+        while (t < 8f) {
+            t += Time.deltaTime;
+            balloonRigidbody.AddForce((chaseTarget.position + chaseTargetOffset - ballPosition.position) * chaseForce);
+            balloonRigidbody.velocity = Mathf.Clamp(balloonRigidbody.velocity.magnitude, 0, chaseMaxSpeed) * balloonRigidbody.velocity.normalized;
+            if (!PlayerController.Instance.IsHiding) {
+                GameFlow.Instance.Die();
+            }
+            yield return null;
+        }
+        //yield return new WaitForSeconds(5f);
         step = -1;
     }
 

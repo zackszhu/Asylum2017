@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DaocaoRenChase : InteractiveTrigger {
+    private float distance;
 
     private void Start() {
         foreach (var rend in GetComponentsInChildren<Renderer>()) {
@@ -17,17 +18,15 @@ public class DaocaoRenChase : InteractiveTrigger {
 
     protected override void PlayerTriggerExit() {
         if (PlayerController.Instance.transform.position.x >= transform.position.x) {
+            distance = PlayerController.Instance.transform.position.x - transform.position.x;
             StartCoroutine(Chase());
         }
     }
 
     private IEnumerator Chase() {
-        while (transform.position.x < PlayerController.Instance.transform.position.x && GameFlow.Instance.checkpointIndex < 2) {
-            transform.Translate(Vector3.forward * 3 * Time.deltaTime);
+        while (GameFlow.Instance.checkpointIndex < 2) {
+            transform.position = PlayerController.Instance.transform.position - distance * Vector3.right;
             yield return null;
-        }
-        if (transform.position.x >= PlayerController.Instance.transform.position.x) {
-            GameFlow.Instance.Die();
         }
         InteractiveEnabled = false;
 

@@ -25,7 +25,7 @@ public class DaocaoRenNormal : InteractiveTrigger {
         var t = 0f;
         while (t < duration) {
             t += Time.deltaTime;
-            transform.rotation = Quaternion.Euler(0, 180f / duration * t + 90, 0);
+            transform.rotation = Quaternion.Euler(0, - 90f / duration * t + 45, 0);
             yield return null;
         }
         InteractiveEnabled = false;

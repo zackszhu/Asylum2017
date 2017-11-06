@@ -5,6 +5,8 @@ using UnityEngine;
 public class Closet : InteractiveTrigger {
 
     [SerializeField] GameObject UIPress;
+    [SerializeField] BoxCollider coll;
+
 
     protected override void InteractionDown() {
         InteractiveEnabled = false;
@@ -12,7 +14,13 @@ public class Closet : InteractiveTrigger {
     }
 
     private IEnumerator DownCO() {
+        if (coll != null) {
+            coll.enabled = false;
+        }
         yield return StartCoroutine(PlayerController.Instance.GoInto());
+        if (coll != null) {
+            coll.enabled = true;
+        }
         GetComponent<Animator>().SetTrigger("Open");
         Invoke("Disappear", 0.3f);
         yield return StartCoroutine(GoOut());
@@ -24,9 +32,15 @@ public class Closet : InteractiveTrigger {
 
     private IEnumerator GoOut() {
         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+        if (coll != null) {
+            coll.enabled = false;
+        }
         PlayerController.Instance.Calm();
         GetComponent<Animator>().SetTrigger("Open");
         yield return StartCoroutine(PlayerController.Instance.GoOut());
+        if (coll != null) {
+            coll.enabled = true;
+        }
         InteractiveEnabled = true;
     }
 

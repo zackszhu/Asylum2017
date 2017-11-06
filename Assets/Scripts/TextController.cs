@@ -16,12 +16,18 @@ public class TextController : MonoBehaviour {
     public static string ScaredText2 { get { return "MOM! Help me!!"; } }
 
     // Use this for initialization
-    void Start () {
+    void Awake () {
         Instance = this;
 	}
 	
 	public static void ShowText(string text) {
         Instance.Text.text = text;
+    }
+
+    public static IEnumerator ToggleText(string text, float time) {
+        Instance.Text.text = text;
+        yield return new WaitForSeconds(time);
+        Instance.Text.text = "";
     }
 
     public static void HideText () {

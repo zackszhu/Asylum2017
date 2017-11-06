@@ -60,12 +60,18 @@ public class FanLamp : InteractiveTrigger {
 
     protected override void PlayerTriggerEnter () {
         if (LightEnabled) {
+            if (GameFlow.Instance.checkpointIndex == 0) {
+                TextController.ShowText(TextController.FanText);
+            }
             if (UIPress) UIPress.SetActive(true);
         }
     }
 
     protected override void PlayerTriggerExit () {
         if (LightEnabled) {
+            if (GameFlow.Instance.checkpointIndex == 0) {
+                TextController.HideText();
+            }
             if (UIPress) UIPress.SetActive(false);
         }
     }

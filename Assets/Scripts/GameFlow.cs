@@ -23,6 +23,12 @@ public class GameFlow : MonoBehaviour {
 
     private bool isDied = false;
 
+    private IEnumerator Start() {
+        TextController.ShowText(TextController.WhereIsMom);
+        yield return new WaitForSeconds(3f);
+        TextController.HideText();
+    }
+
     private void Update() {
         if (checkpointIndex + 1 < checkpoints.Length && PlayerController.Instance.transform.position.x > checkpoints[checkpointIndex + 1]) {
             checkpointIndex++;

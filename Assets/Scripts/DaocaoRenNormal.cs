@@ -10,10 +10,11 @@ public class DaocaoRenNormal : InteractiveTrigger {
     }
 
     protected override void PlayerTriggerEnter() {
-        
+        TextController.ShowText(TextController.ScarecrowText);
     }
 
     protected override void PlayerTriggerExit() {
+        TextController.HideText();
         if (PlayerController.Instance.transform.position.x >= transform.position.x) {
             PlayerController.Instance.Frightened();
             StartCoroutine(TurnAround());

@@ -47,10 +47,12 @@ public class BalloonMovement : MonoBehaviour {
     }
 
     private IEnumerator FleeCO() {
+        TextController.ShowText(TextController.BalloonText);
         while (ballPosition.position.x < targetX) {
             balloonRigidbody.AddForce(Vector3.right * fleeForce);
             yield return null;
         }
+        TextController.HideText();
         step++;
     }
 

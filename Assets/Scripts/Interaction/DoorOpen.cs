@@ -30,6 +30,7 @@ public class DoorOpen : MonoBehaviour {
     }
 
     private void OnTriggerExit(Collider other) {
+        if (!canOpen) return;
         if (other.CompareTag("Player")) {
             doorAnimator.SetTrigger("Close");
             if (lockAfterOpen) {

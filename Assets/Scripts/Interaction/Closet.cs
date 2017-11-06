@@ -46,9 +46,17 @@ public class Closet : InteractiveTrigger {
 
     protected override void PlayerTriggerEnter() {
         if (UIPress) UIPress.SetActive(true);
+        if (GameFlow.Instance.checkpointIndex == 0) {
+            if (GameFlow.Instance.checkpointIndex == 0) {
+                TextController.ShowText(TextController.ClosetText);
+            }
+        }
     }
 
     protected override void PlayerTriggerExit() {
         if (UIPress) UIPress.SetActive(false);
+        if (GameFlow.Instance.checkpointIndex == 0) {
+            TextController.HideText();
+        }
     }
 }

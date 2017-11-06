@@ -84,9 +84,11 @@ public class PlayerController : MonoBehaviour {
 
     public void Shock() {
         BoySoundController.PlayShocked();
+        StartCoroutine(TextController.ToggleText(TextController.ScaredText1, 2f));
     }
 
     public void Frightened() {
+        StartCoroutine(TextController.ToggleText(TextController.ScaredText2, 3f));
         IsRunning = true;
         MoveSpeed = RunSpeed;
         BoySoundController.PlayShocked();

@@ -7,11 +7,12 @@ public class GameFlow : MonoBehaviour {
     public static GameFlow Instance { get; private set; }
 
     private void Awake() {
-        DontDestroyOnLoad(gameObject);
         if (Instance != null) {
-            Destroy(gameObject);
+            return;
+            //Destroy(gameObject);
         }
         Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     [SerializeField]
@@ -58,5 +59,6 @@ public class GameFlow : MonoBehaviour {
         PlayerController.Instance.transform.position = pos;
         yield return StartCoroutine(Fader.FadeInCoroutine());
         isDied = false;
+        reloadCO = null;
     }
 }

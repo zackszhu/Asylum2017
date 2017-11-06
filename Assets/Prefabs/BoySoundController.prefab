@@ -53,7 +53,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -133,7 +133,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -189,7 +189,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -231,3 +231,4 @@ MonoBehaviour:
   shocked:
   - {fileID: 8300000, guid: fac8bbc62694a704a8adbc3920bb2999, type: 3}
   - {fileID: 8300000, guid: 2e32214deb1a3c0498f8e2b14ed893b1, type: 3}
+  scream: {fileID: 8300000, guid: 378ae6207ba0f634e81b73fd33906bac, type: 3}

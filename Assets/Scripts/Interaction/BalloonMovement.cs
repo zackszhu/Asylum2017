@@ -54,12 +54,14 @@ public class BalloonMovement : MonoBehaviour {
         step++;
     }
 
+    [SerializeField] private float chaseDistance;
+
     private IEnumerator ChaseCO() {
         PlayerController.Instance.Frightened();
         while (!PlayerController.Instance.IsHiding) { // need variable
             balloonRigidbody.AddForce((chaseTarget.position + chaseTargetOffset - ballPosition.position) * chaseForce);
             balloonRigidbody.velocity = Mathf.Clamp(balloonRigidbody.velocity.magnitude, 0, chaseMaxSpeed) * balloonRigidbody.velocity.normalized;
-            if ((chaseTarget.position + chaseTargetOffset - ballPosition.position).magnitude < 0.2f) {
+            if ((chaseTarget.position + chaseTargetOffset - ballPosition.position).magnitude < chaseDistance) {
                 GameFlow.Instance.Die();
             }
             yield return null;

@@ -8,6 +8,10 @@ public class DoorOpen : MonoBehaviour {
     private Animator doorAnimator;
     [SerializeField]
     private bool lockAfterOpen;
+    [SerializeField]
+    private AudioClip OpenClip;
+    [SerializeField]
+    private AudioClip CloseClip;
 
     private bool canOpen = true;
 
@@ -19,6 +23,9 @@ public class DoorOpen : MonoBehaviour {
             int index = Convert.ToInt32(other.transform.position.x > transform.position.x);
             if (index == 1 && !canOpen) return;
             doorAnimator.SetTrigger(triggers[index]);
+            var audio = GetComponent<AudioSource>();
+            audio.clip = OpenClip;
+            audio.Play();
         }
     }
 
@@ -28,6 +35,9 @@ public class DoorOpen : MonoBehaviour {
             if (lockAfterOpen) {
                 canOpen = false;
             }
+            var audio = GetComponent<AudioSource>();
+            audio.clip = CloseClip;
+            audio.Play();
         }
     }
 }

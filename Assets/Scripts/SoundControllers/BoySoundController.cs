@@ -12,10 +12,16 @@ public class BoySoundController : MonoBehaviour {
     [SerializeField] AudioClip[] emm;
     [SerializeField] AudioClip[] mommy;
     [SerializeField] AudioClip[] shocked;
+    [SerializeField] AudioClip scream;
 
     private void Awake () {
         if (!Instance) Instance = this;
         else Debug.LogWarning("Multiple BoySound detected");
+    }
+
+    public static void PlayScream() {
+        Instance.BoyAudio.clip = Instance.scream;
+        Instance.BoyAudio.Play();
     }
 
     public static void PlayBreathNormal () {

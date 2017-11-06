@@ -16,6 +16,12 @@ public class DropFan : InteractiveTrigger {
     protected override void PlayerTriggerExit() {
     }
 
+    private void OnCollisionEnter(Collision collision) {
+        if (!GetComponent<AudioSource>().isPlaying) {
+            GetComponent<AudioSource>().Play();
+        }
+    }
+
     // Use this for initialization
     void Start () {
         rigid = GetComponent<Rigidbody>();

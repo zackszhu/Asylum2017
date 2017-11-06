@@ -13,7 +13,7 @@ public class Lightening : MonoBehaviour {
     [SerializeField] Light LighteningLight;
     [SerializeField] AudioSource LighteningAudio;
 
-    [SerializeField] GameObject DaocaoRen;
+    [SerializeField] GameObject[] DaocaoRen;
 
     private void Awake () {
         if (!Instance) Instance = this;
@@ -56,14 +56,18 @@ public class Lightening : MonoBehaviour {
         MainCamera.backgroundColor = Color.Lerp(CameraDefaultColor, LighteningColor, degree);
         LighteningLight.intensity = Mathf.Lerp(0f, LightIntensity, degree);
         if (degree == 1) {
-            foreach (var rend in DaocaoRen.GetComponentsInChildren<Renderer>()) {
-                rend.enabled = true;
+            foreach (var dcr in DaocaoRen) {
+                foreach (var rend in dcr.GetComponentsInChildren<Renderer>()) {
+                    rend.enabled = true;
+                }
             }
-            
+
         }
         else {
-            foreach (var rend in DaocaoRen.GetComponentsInChildren<Renderer>()) {
-                rend.enabled = false;
+            foreach (var dcr in DaocaoRen) {
+                foreach (var rend in dcr.GetComponentsInChildren<Renderer>()) {
+                    rend.enabled = false;
+                }
             }
         }
     }
